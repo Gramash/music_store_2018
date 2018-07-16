@@ -1,0 +1,54 @@
+    <!--registration form-->
+    <div id="sign_up" class="w3-modal" <c:if test="${not empty errorMap }"> style="display:block" </c:if>>
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+                <form id="signUpForm" action="signup" method="POST" enctype="multipart/form-data">
+                 <i onclick="document.getElementById('sign_up').style.display='none'"
+                 class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                 <h2 class="w3-wide">SIGN-UP</h2>
+                 <p><input class="w3-input w3-border" type="text" placeholder="First Name" id="name" name="name" 
+                 	value="${requestScope.name}" /></p>
+                 <div id="nameinfo" class="info">
+                    <p id="nameCheck" class="invalid">Should start with a capital letter. 2-20 symbols long </p>
+                </div>
+                <p><input class="w3-input w3-border" type="text" placeholder="Last Name" id="lastName" name="lastName" 
+                	value="${requestScope.lastName}" /></p>
+                <div id="lastnameinfo" class="info">
+                    <p id="lastNameCheck" class="valid">Should start with a capital letter. 2-20 symbols long </p>
+                </div>
+                <p><input class="w3-input w3-border" type="text" placeholder="E-mail" id="email" name="email" 
+                	value="${requestScope.email}" /></p>
+                <div id="emailinfo" class="info">
+                    <p id="emailCheck" class="valid">Please input proper email according to the pattern
+                    email@domain.com</p>
+                </div>
+                <p><input class="w3-input w3-border" type="password" placeholder="Password" id="psw" name="password" /></p>
+                <div id="passinfo" class="info">
+                    <p id="pswCheck" class="invalid">Pass should contain all of the following:<br>
+                        a lowercase letter, an uppercase letter, and a number.
+                    Should be at least 8 characters long</p>
+                </div>
+                <p><input class="w3-input w3-border" type="password" placeholder="Repeat Password" id="psw2" name="passwordCheck" /></p>
+                <div id="psw2info" class="info">
+                    <p id="psw2Check" class="invalid">Should be equal to previous pass</p>
+                </div>
+                 <input type="file" name="picture" accept="image/*">
+                <p>
+                <myTag:captcha/>
+                <button id="changeCaptcha" class="refresh"><i id="refresh-icon" class="glyphicon glyphicon-repeat"></i></button>
+                </p>
+                <p><input name="captchaInput" class="captcha-input-field"/></p>
+                 <c:forEach items="${errorMap}" var="message" varStatus="loop">
+                    <div class="w3-panel w3-red w3-display-container">
+                    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-large w3-display-topright">×</span>
+                    <h3>${message.key}</h3>
+                    <p> ${message.value}</p>
+                    </div>
+                </c:forEach>
+                <button id="knopka" type="submit" class="w3-button w3-padding-large w3-green w3-margin-bottom submit">
+                    SignUp
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

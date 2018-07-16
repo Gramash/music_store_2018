@@ -1,0 +1,146 @@
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+body {font-family: Arial, Helvetica, sans-serif; }
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.submit {
+  width: 40%;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+.invalid {
+  color: red;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.valid {
+  color: green;
+}
+
+.info{
+  display:none
+}
+
+/* figure:hover img{
+  -webkit-transform: scale3d(1.5, 1.5, 1);
+  transform: scale3d(1.5, 1.5, 1);
+}
+
+figure img{
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-transform: scale3d(1.1, 1, 1);
+  transform: scale3d(1, 1, 1);
+} */
+
+figure{
+  width: 210px;
+  height: 257px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  box-shadow: 0 0 5px #ddd;
+}
+
+.refresh{
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  text-align: center;
+  padding:8px 16px;
+  color:white;
+  background-color:#2196F3;
+}
+
+.captcha-input-field{
+  width: 210px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+}
+
+.captcha-class{
+  position: relative;
+  bottom: 9px;
+  
+}
+
+.buy-button{
+  width: 50%;
+  color: grey;
+  background-color: gray !important;
+}
+
+.cart{
+width:20%;
+opacity: 100%;
+background-color: white;
+float: right;
+}
+
+.panel-image {
+position: relative;
+top: 50%;
+}
+
+div.fixed {
+  position: fixed;
+  width: 65%;
+  bottom: 20px;
+  } 
+
+#filter input, select{
+  width: 90%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  font-size: 15px;
+}
+
+#filter label {
+  color: black;
+  font-size: 15px;
+}
+
+

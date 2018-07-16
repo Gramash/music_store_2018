@@ -1,0 +1,8 @@
+*/SoundUtil.java
+*/.idea
+*/target
+*/CrosscompilerTest.java
+
+*.iml
+/musicStore/log.out
+*/log.out
